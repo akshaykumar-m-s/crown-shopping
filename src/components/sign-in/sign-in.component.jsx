@@ -49,7 +49,7 @@ export class SignIn extends Component {
                     />
 
                     <CustomButton type="submit">Sign In</CustomButton>
-                    <CustomButton onclick={signInWithGoogle}>
+                    <CustomButton onClick={signInWithGoogle}>
                         {' '}Sign In with Google{' '}
                     </CustomButton>
                 </form>

@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import "./sign-up.component.scss";
-import { FormInput } from "../form-input/form-input.component";
-import { CustomButton } from "../custom-button/custom-button.component";
-import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
+import React, { Component } from 'react';
+import './sign-up.component.scss';
+import { FormInput } from '../form-input/form-input.component';
+import { CustomButton } from '../custom-button/custom-button.component';
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
-export class SignUp extends Component {
+class SignUp extends Component {
   constructor() {
     super();
 
     this.state = {
-      displayName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
+      displayName: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
     };
   }
 
@@ -34,10 +34,10 @@ export class SignUp extends Component {
       await createUserProfileDocument(user, { displayName });
 
       this.setState({
-        displayName: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
       });
     } catch (error) {
       console.error(error);
@@ -95,3 +95,5 @@ export class SignUp extends Component {
     );
   }
 }
+
+export default SignUp;

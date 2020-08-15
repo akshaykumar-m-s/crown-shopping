@@ -4,7 +4,7 @@ import { FormInput } from '../form-input/form-input.component';
 import { CustomButton } from '../custom-button/custom-button.component';
 import { signInWithGoogle, auth } from '../../firebase/firebase.utils';
 
-export class SignIn extends Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
 
@@ -71,3 +71,5 @@ export class SignIn extends Component {
     );
   }
 }
+
+export default SignIn;
